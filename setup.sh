@@ -11,5 +11,5 @@ test -d ${PWD}/conda || bash miniconda.sh -b -p ${PWD}/conda
 # clone package
 conda env create -f ./conda_env.yml
 conda activate avsd
-# install spacy language model. Make sure you activated the conda environment
-#python -m spacy download en
+#install spacy language model. Make sure you activated the conda environment
+python -m spacy download en
