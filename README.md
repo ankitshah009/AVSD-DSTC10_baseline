@@ -7,11 +7,11 @@ Details of our scheme are in the following paper.
 
 Please cite the paper for the system:
 
-    @inproceedings{chori@interspeech,
-            title={Joint Student-Teacher Learning for Audio-Visual Scene-Aware Dialog},
-            author={Chiori Hori, Anoop Cherian, Tim K. Marks, Takaaki Hori},
-            booktitle={Accepted to Interspeech},
-            year={2019}
+    @ixxxx{ankit@arxiv,
+            title={Reasoning for Audio Visual Scene-Aware Dialog(AVSD) Track in DSTC1},
+            author={Ankit Shah, Shijie Geng, Peng Gao, Anoop Cherian, Tim K. Marks, Chiori Hori},
+            booktitle={Accepted to DSTC10},
+            year={2021}
     }
 
 Please cite the paper for attentional multimoda fusion for AVSD.
