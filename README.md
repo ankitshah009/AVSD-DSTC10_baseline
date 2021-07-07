@@ -1,4 +1,4 @@
-# DSTC10 - Audio Visual Scene-aware Dialog (AVSD) System - Baseline System
+# DSTC10 - Audio Visual Scene-aware Dialog (AVSD) - Baseline System
 
 This repository provides a baseline system for the AVSD track of the 10-th Dialog System Technology Challenges (DSTC10).
 The system employs an audio-visual Transformer with I3D visual features and VGGish audio features.
