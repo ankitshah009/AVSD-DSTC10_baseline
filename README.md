@@ -4,8 +4,6 @@ This repository provides a baseline system for the AVSD track of the 10-th Dialo
 The system employs an audio-visual Transformer with I3D visual features and VGGish audio features in the default setup.
 
 Details of our scheme are in the following paper.
-
-Please cite the paper for the baseline system:
 https://arxiv.org/xxxxx
 
     @ixxxx{ankit@arxiv,
@@ -13,16 +11,6 @@ https://arxiv.org/xxxxx
             author={Ankit Shah, Shijie Geng, Peng Gao, Anoop Cherian, Tim K. Marks, Chiori Hori},
             booktitle={Accepted to DSTC10},
             year={2021}
-    }
-
-Please cite the paper for attentional multimodal fusion for AVSD.
-https://arxiv.org/abs/1806.08409
-
-    @article{hori2018end,
-      title={End-to-End Audio Visual Scene-Aware Dialog using Multimodal Attention-Based Video Features},
-      author={Hori, Chiori and Alamri, Huda and Wang, Jue and Winchern, Gordon and Hori, Takaaki and Cherian, Anoop and Marks, Tim K and Cartillier, Vincent and Lopes, Raphael Gontijo and Das, Abhishek and others},
-      journal={arXiv preprint arXiv:1806.08409},
-      year={2018}
     }
 
 ## How to run the code:
@@ -75,6 +63,30 @@ https://arxiv.org/abs/1806.08409
 Note: IoU-1 and IoU-2 are computed based on the *Intersection over Union (IoU)* between ground-truth
 and predicted reasoning regions, where IoU-1 measures the IoU for each pair of proposed regions while
 IoU-2 measures the IoU between merged regions.
+
+
+## Citation
+Please cite the following papers if you use this package for publication:
+
+### Attentional multimodal fusion for AVSD.
+https://arxiv.org/abs/1806.08409
+
+    @article{hori2018end,
+      title={End-to-End Audio Visual Scene-Aware Dialog using Multimodal Attention-Based Video Features},
+      author={Hori, Chiori and Alamri, Huda and Wang, Jue and Winchern, Gordon and Hori, Takaaki and Cherian, Anoop and Marks, Tim K and Cartillier, Vincent and Lopes, Raphael Gontijo and Das, Abhishek and others},
+      journal={arXiv preprint arXiv:1806.08409},
+      year={2018}
+    } 
+
+### Audio Visual Transformer-based AVSD@DSTC10 baseline system
+https://arxiv.org/xxxxx
+
+    @ixxxx{ankit@arxiv,
+            title={Reasoning for Audio Visual Scene-Aware Dialog(AVSD) Track in DSTC10},
+            author={Ankit Shah, Shijie Geng, Peng Gao, Anoop Cherian, Tim K. Marks, Chiori Hori},
+            booktitle={Accepted to DSTC10},
+            year={2021}
+    }
 
 ## Acknowledgements
 This system has been built upon the Bi-modal Transformer in https://github.com/v-iashin/BMT, and modified for AVSD.
