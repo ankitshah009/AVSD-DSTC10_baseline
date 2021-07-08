@@ -2,6 +2,7 @@
 
 This repository provides a baseline system for the AVSD track of the 10-th Dialog System Technology Challenges (DSTC10).
 The system employs an audio-visual Transformer with I3D visual features and VGGish audio features in the default setup.
+The system outputs answers in response to questions with a dialog history and timings for evidence reasoing the answers as well. 
 
 Details of our scheme are in the following paper.
 https://arxiv.org/xxxxx
