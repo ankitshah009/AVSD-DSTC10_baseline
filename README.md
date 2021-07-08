@@ -4,7 +4,7 @@ This repository provides a baseline system for the AVSD track of the 10-th Dialo
 The system employs an audio-visual Transformer with I3D visual features and VGGish audio features in the default setup.
 The system outputs answers in response to questions with a dialog history and timings for evidence reasoing the answers as well. 
 
-Details of our scheme are in the following paper.
+Details of our scheme are in the following paper. 
 https://arxiv.org/xxxxx
 
     @ixxxx{ankit@arxiv,
@@ -13,6 +13,8 @@ https://arxiv.org/xxxxx
             booktitle={Accepted to DSTC10},
             year={2021}
     }
+
+* Note - This paper link will be updated soon and made available for citation before the submission to the workshop/submitting the challenge results. 
 
 ## How to run the code:
 
