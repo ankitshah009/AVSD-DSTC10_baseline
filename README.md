@@ -14,7 +14,7 @@ Please cite the paper for the system:
             year={2021}
     }
 
-Please cite the paper for attentional multimoda fusion for AVSD.
+Please cite the paper for attentional multimodal fusion for AVSD.
 https://arxiv.org/abs/1806.08409
 
     @article{hori2018end,
@@ -29,20 +29,20 @@ https://arxiv.org/abs/1806.08409
    1. Obtain the package.
       - `git clone --recursive https://github.com/ankitshah009/AVSD-DSTC10_baseline/`
   
-   2. Confirm if the following files exists
+   2. Confirm if the following files exist in the downloaded repo
       - `data/train_set4DSTC10-AVSD.json` (official training set)
       - `data/valid_set4DSTC10-AVSD+reason.json` (official validation set)
-      - `data/test_set4DSTC10-AVSD+reason.json` (official test set, but not included yet,
-        and will be provided)
+      - `data/test_set4DSTC10-AVSD+reason.json` (official test set, not included in the package yet,
+        however will be provided)
  
-   3. Run `download_data.sh` to locate feature files in `./data/features` (or make sybolic links),
-      where `video_feats` and `vggish` directories will be made. `wget` command is required. (Installation information if wget is not available - https://www.tecmint.com/install-wget-in-linux/)
+   3. Run `download_data.sh` to download the feature files in `./data/features` (or make sybolic links),
+      where `video_feats` and `vggish` directories will be created. `wget` command is required. (If wget is not available, please see https://www.tecmint.com/install-wget-in-linux/)
 
-   4. Run `setup.sh` once to create a local conda environment (not mandatory. you can do it 
-      manually based on required packages written in `./conda_env.yaml`)
+   4. Run `setup.sh` to create a local conda environment (not mandatory. you can do it 
+      manually based on the required packages specified in `./conda_env.yaml`)
 
    5. Run `run.sh` to train the audio-visual Transformer.<br>
-      In order to run the code on multiple GPU configuration - add device_ids parameters to the main.py command.  
+      In order to run the code on multiple GPUs - add device_ids parameters to the main.py command.  
       Model files and generated sentences will be stored in `./log/XXXX/train_cap/`, where XXXX
       is an experiment name specified in `run.sh`.
       - `captioning_results_val_eYY.json`: results including generated sentences and
