@@ -5,7 +5,8 @@ The system employs an audio-visual Transformer with I3D visual features and VGGi
 
 Details of our scheme are in the following paper.
 
-Please cite the paper for the system:
+Please cite the paper for the baseline system:
+https://arxiv.org/xxxxx
 
     @ixxxx{ankit@arxiv,
             title={Reasoning for Audio Visual Scene-Aware Dialog(AVSD) Track in DSTC1},
