@@ -9,7 +9,7 @@ Please cite the paper for the baseline system:
 https://arxiv.org/xxxxx
 
     @ixxxx{ankit@arxiv,
-            title={Reasoning for Audio Visual Scene-Aware Dialog(AVSD) Track in DSTC1},
+            title={Reasoning for Audio Visual Scene-Aware Dialog(AVSD) Track in DSTC10},
             author={Ankit Shah, Shijie Geng, Peng Gao, Anoop Cherian, Tim K. Marks, Chiori Hori},
             booktitle={Accepted to DSTC10},
             year={2021}
