@@ -35,7 +35,7 @@ https://arxiv.org/xxxxx
 
    5. Run `run.sh` to train the audio-visual Transformer.<br>
       In order to run the code on multiple GPUs - add device_ids parameters to the main.py command.  
-      Model files and generated sentences will be stored in `./log/XXXX/train_cap/`, where XXXX
+      Model files and generated sentences will be stored in `./log/XXXX/train_cap/`, where XXXX (TBA)
       is an experiment name specified in `run.sh`.
       - `captioning_results_val_eYY.json`: results including generated sentences and
         reasoning regions for the validation set at epoch YY (YY > 30).
