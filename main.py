@@ -76,6 +76,9 @@ def get_parser():
                         help='# of epochs to skip before starting 1-by-1 validation (saves time)')
     parser.add_argument('--early_stop_after', type=int, default=30,
                         help='number of epochs to wait for best metric to change before stopping')
+    parser.add_argument('--key-metric', type=str, default='Bleu_4',
+                        choices=['Bleu_4', 'METEOR', 'ROUGE_L', 'CIDEr', 'IoU-1', 'IoU-2'],
+                        help='number of epochs to wait for best metric to change before stopping')
     parser.add_argument(
         '--smoothing', type=float, default=0.7,
         help='smoothing coeff (= 0 cross ent loss, more -- stronger smoothing) must be in [0, 1]'

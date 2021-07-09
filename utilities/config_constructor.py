@@ -41,6 +41,7 @@ class Config(object):
         if args.procedure == 'train_cap':
             self.unfreeze_word_emb = args.unfreeze_word_emb
             self.model = args.model
+            self.key_metric = args.key_metric
         elif args.procedure == 'eval_cap':
             pass
         else:

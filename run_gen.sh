@@ -13,6 +13,8 @@ test_set=./data/valid_set4DSTC10-AVSD+reason.json
 test_csv=./data/dstc10_val.csv
 featpath_suffix=
 last_only=
+log_dir=./log
+
 if [ $# -eq 1 ] && [ $1 = "test" ];then
   # mock test with DSTC8 test set
   test_set=./data/mock_test_set4DSTC10-AVSD_from_DSTC8_singref.json
@@ -34,10 +36,10 @@ $run python main.py \
  --video_features_path ${datapath}/video_feats$featpath_suffix/ \
  --audio_features_path ${datapath}/vggish$featpath_suffix/ \
  --procedure eval_cap \
- --pretrained_cap_model_path ./log/${exp_name}/train_cap/best_cap_model.pt \
+ --pretrained_cap_model_path ${log_dir}/${exp_name}/train_cap/best_cap_model.pt \
  --B 12 \
  --stopwords data/stopwords.txt \
  --exp_name $exp_name \
- --log_dir ./log \
+ --log_dir $log_dir \
  $last_only
 

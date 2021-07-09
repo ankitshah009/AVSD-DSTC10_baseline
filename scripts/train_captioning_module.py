@@ -1,4 +1,5 @@
 import numpy as np
+import sys
 # import tensorboardX as tensorboard
 import torch
 from torch.utils import tensorboard as tensorboard
@@ -76,9 +77,10 @@ def train_cap(cfg):
     best_metric = 0
     # "early stopping" thing
     num_epoch_best_metric_unchanged = 0
+    best_epoch = 0
 
     for epoch in range(cfg.epoch_num):
-        print(f'The best metrict was unchanged for {num_epoch_best_metric_unchanged} epochs.')
+        print(f'The best metric was unchanged for {num_epoch_best_metric_unchanged} epochs.')
         print(f'Expected early stop @ {epoch+cfg.early_stop_after-num_epoch_best_metric_unchanged}')
         print(f'Started @ {cfg.curr_time}; Current timer: {timer(cfg.curr_time)}')
         
@@ -105,23 +107,28 @@ def train_cap(cfg):
                     TBoard.add_scalar('val/metrics/' + metric, score * 100, epoch)
                 TBoard.add_scalar('val/duration_of_1by1', duration / 60, epoch)
                 TBoard.add_scalar('val/loss', val_loss, epoch)
-                # saving the model if it is better than the best so far
-                if best_metric < val_metrics['Bleu_4']:
-                    best_metric = val_metrics['Bleu_4']
-                    save_model(cfg, epoch, model, optimizer, val_loss,
+            # saving the model if it is better than the best so far
+            if best_metric < val_metrics[cfg.key_metric]:
+                best_metric = val_metrics[cfg.key_metric]
+                save_model(cfg, epoch, model, optimizer, val_loss,
                                val_metrics, train_dataset.trg_voc_size)
-                    # reset the early stopping criterion
-                    num_epoch_best_metric_unchanged = 0
-                else:
-                    num_epoch_best_metric_unchanged += 1
+                # reset the early stopping criterion
+                num_epoch_best_metric_unchanged = 0
+                best_epoch = epoch
+            else:
+                num_epoch_best_metric_unchanged += 1
             # Output the results
+            print(f'Validation scores at epoch {epoch}',
+                  f'(best {cfg.key_metric}: %2.4f)' % (best_metric * 100)
+                  if epoch==best_epoch else '')
             print('-' * 25)
             for metric, score in val_metrics.items():
                 print('| %s: %2.4f' % (metric, 100 * score))
             print('-' * 25)
             print('duration_of_1by1:', duration / 60, epoch)
+            sys.stdout.flush()
 
     print(f'{cfg.curr_time}')
-    print(f'best_metric: {best_metric}')
+    print(f'best {cfg.key_metric}: %2.4f at epoch {best_epoch}' % (best_metric * 100))
     if cfg.to_log:
         TBoard.close()

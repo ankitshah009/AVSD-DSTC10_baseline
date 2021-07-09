@@ -10,18 +10,20 @@ run=
 exp_name=avsd01
 train_set=./data/train_set4DSTC10-AVSD.json
 val_set=./data/valid_set4DSTC10-AVSD+reason.json
+log_dir=./log
 
 # check if the log directory exists
-if [ -d "log/${exp_name}/train_cap" ]; then
-   echo \"./log/${exp_name}/train_cap\" already exists. Set a new exp_name different from \"${exp_name}\", or remove the directory
+if [ -d "${log_dir}/${exp_name}/train_cap" ]; then
+   echo \"${log_dir}/${exp_name}/train_cap\" already exists. Set a new exp_name different from \"${exp_name}\", or remove the directory
    exit
 fi
 # convert data
-echo coverting json files to csv for the tool
+echo Coverting json files to csv for the tool
 python utils/generate_csv.py duration_info/duration_Charades_v1_480.csv $train_set train ./data/dstc10_train.csv
 python utils/generate_csv.py duration_info/duration_Charades_v1_480.csv $val_set val ./data/dstc10_val.csv
 
 # train
+echo Start training
 $run python main.py \
  --train_meta_path ./data/dstc10_train.csv \
  --val_meta_path ./data/dstc10_val.csv \
@@ -29,10 +31,10 @@ $run python main.py \
  --video_features_path ${datapath}/video_feats/ \
  --audio_features_path ${datapath}/vggish/ \
  --procedure train_cap \
- --B 12 \
+ --B 10 \
  --unfreeze_word_emb \
  --d_vid 2048 --d_aud 128 \
- --d_model_video 512 \
+ --d_model_video 128 \
  --d_model_audio 64 \
  --d_model_caps 256 \
  --use_linear_embedder \
@@ -40,4 +42,4 @@ $run python main.py \
  --one_by_one_starts_at 30 \
  --stopwords data/stopwords.txt \
  --exp_name $exp_name \
- --log_dir ./log
+ --log_dir $log_dir
