@@ -52,15 +52,15 @@ https://arxiv.org/xxxxx
 ### Example output of `run_gen.sh`
 
     -------------------------
-    | Bleu_1: 25.5674
-    | Bleu_2: 16.4486
-    | Bleu_3: 11.3103
-    | Bleu_4: 8.1863
-    | METEOR: 11.6901
-    | ROUGE_L: 29.5971
-    | CIDEr: 83.4498
-    | IoU-1: 39.9970
-    | IoU-2: 41.3343
+    | Bleu_1: 27.1398
+    | Bleu_2: 17.9315
+    | Bleu_3: 12.6251
+    | Bleu_4: 9.3291
+    | METEOR: 12.5347
+    | ROUGE_L: 31.2366
+    | CIDEr: 96.0996
+    | IoU-1: 37.9074
+    | IoU-2: 39.0904
     -------------------------
 
 Note: IoU-1 and IoU-2 are computed based on the *Intersection over Union (IoU)* between ground-truth
