@@ -35,7 +35,7 @@ https://arxiv.org/xxxxx
 
    5. Run `run.sh` to train the audio-visual Transformer.<br>
       In order to run the code on multiple GPUs - add device_ids parameters to the main.py command.  
-      For example the device_ids can be passed as  --device_ids 0,1,2,3 for a 4 GPU cluster training. 
+      For example the device_ids can be passed as  --device_ids 0,1,2,3 for a 4 GPU cluster training. <br>
       Model files and generated sentences will be stored in `./log/XXXX/train_cap/`, where XXXX (TBA)
       is an experiment name specified in `run.sh`.
       - `captioning_results_val_eYY.json`: results including generated sentences and
