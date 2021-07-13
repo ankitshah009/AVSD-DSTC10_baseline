@@ -8,7 +8,7 @@ if [ $# -lt 1 ];then
     echo "Usage: $0 submission.json [test]";
     exit 1
 fi
-reference=./data/val_set4DSTC10-AVSD+reason.json
+reference=./data/valid_set4DSTC10-AVSD+reason.json
 submission=$1
 last_only=
 if [ $# -eq 2 ] && [ $2 = "test" ]; then
