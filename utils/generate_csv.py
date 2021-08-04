@@ -25,7 +25,10 @@ def generate_csv(duration_file,inp_json,phase,output_csv):
             d['duration']=item[1]
             d['end'] = item[1]
             d['start'] = 0
-            d['caption'] = ' '.join(['Q: ' + item_ins['question']+ ' A: ' + item_ins['answer'] for item_ins in item1['dialog']])
+            d['caption'] = ' '.join(['Q: ' + item_ins['question'] 
+                                  + ' A: ' + (item_ins['answer'][0] if type(item_ins['answer'])==list
+                                              else item_ins['answer'])
+                                    for item_ins in item1['dialog']])
             d['phase'] = phase
             d_list.append(d)
             c+=1 
