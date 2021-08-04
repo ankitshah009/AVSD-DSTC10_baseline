@@ -1,7 +1,6 @@
 #!/bin/bash
 
-. conda/bin/activate
-conda activate avsd
+. conda/bin/activate avsd
 
 datapath=data/features
 #run='srun -p gpu --gres=gpu:1'  # if slurm is available

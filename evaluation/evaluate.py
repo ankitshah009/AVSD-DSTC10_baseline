@@ -59,13 +59,15 @@ class AVSD_eval(object):
             vid = d['image_id']
             if last_only:
                 t, turn = len(d['dialog']), d['dialog'][-1]
-                results['%s_res%03d' % (vid, t)] = [self.filter(turn['answer'])]
+                answer = turn['answer'] if type(turn['answer'])==list else [turn['answer']]
+                results['%s_res%03d' % (vid, t)].extend([self.filter(a) for a in answer])
                 if 'reason' in turn:
                     for reason in turn['reason']:
                         intervals['%s_res%03d' % (vid, t)].append(reason['timestamp'])
             else:
                 for t, turn in enumerate(d['dialog'], 1):
-                    results['%s_res%03d' % (vid, t)].append(self.filter(turn['answer']))
+                    answer = turn['answer'] if type(turn['answer'])==list else [turn['answer']]
+                    results['%s_res%03d' % (vid, t)].extend([self.filter(a) for a in answer])
                     if 'reason' in turn:
                         for reason in turn['reason']:
                             intervals['%s_res%03d' % (vid, t)].append(reason['timestamp'])
@@ -80,13 +82,15 @@ class AVSD_eval(object):
                 vid = d['image_id']
                 if last_only:
                     t, turn = len(d['dialog']), d['dialog'][-1]
-                    gts['%s_res%03d' % (vid, t)].append(self.filter(turn['answer']))
+                    answer = turn['answer'] if type(turn['answer'])==list else [turn['answer']]
+                    gts['%s_res%03d' % (vid, t)].extend([self.filter(a) for a in answer])
                     if 'reason' in turn:
                         for reason in turn['reason']:
                             intervals['%s_res%03d' % (vid, t)].append(reason['timestamp'])
                 else:
                     for t, turn in enumerate(d['dialog'], 1):
-                        gts['%s_res%03d' % (vid, t)].append(self.filter(turn['answer']))
+                        answer = turn['answer'] if type(turn['answer'])==list else [turn['answer']]
+                        gts['%s_res%03d' % (vid, t)].extend([self.filter(a) for a in answer])
                         if 'reason' in turn:
                             for reason in turn['reason']:
                                 intervals['%s_res%03d' % (vid, t)].append(reason['timestamp'])
@@ -175,7 +179,7 @@ def main(args):
     # Output the results
     print ('-' * 25)
     for metric, score in evaluator.scores.items():
-        print ('| %s: %2.4f' % (metric, 100 * score))
+        print ('| %s: %2.4f' % (metric, score))
     print ('-' * 25)
 
 if __name__=='__main__':

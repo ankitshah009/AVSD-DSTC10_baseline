@@ -24,6 +24,16 @@ function google_download() {
   echo Extracting files from $OUT
   tar zxf $OUT -C $TARGET
 }
+function google_download_1() {
+  echo Downloading $OUT
+  if [ ! -f $OUT ]; then
+    CONFIRM=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate "https://drive.google.com/uc?export=download&id=$FILEID" -O- | sed -En 's/.*confirm=([0-9A-Za-z_]+).*/\1/p');
+    wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$CONFIRM&id=$FILEID" -O $OUT;
+    rm -f /tmp/cookies.txt
+  else
+    echo $OUT already exists
+  fi
+}
 
 # i3d_rgb.tgz
 FILEID="1MEk8jdE1VRc70kxzLEg5DT2W0dUN0dYc";
@@ -78,5 +88,23 @@ mkdir .vector_cache
 cd .vector_cache
 wget https://a3s.fi/swift/v1/AUTH_a235c0f452d648828f745589cde1219a/bmt/glove.840B.300d.zip  -q --show-progress
 cd ../
+
+#data folder
+DATA=data
+FILEID="1YkWZe3SbySl6mOBCnbQILwdYOpvo4eY2"
+OUT="$DATA/mock_test_set4DSTC10-AVSD_from_DSTC7_singref.json"
+google_download_1
+
+FILEID="1zfqyGCFUkFSU94OZlpFFrROY7EXqYqA5"
+OUT="$DATA/mock_test_set4DSTC10-AVSD_from_DSTC8_singref.json"
+google_download_1
+
+FILEID="1V50xFSFIcAusbfkmwR3w-hR2_M6u5sgt"
+OUT="$DATA/mock_test_set4DSTC10-AVSD_from_DSTC7_multiref.json"
+google_download_1
+
+FILEID="1tT8L3uwTAekhKxb3c4r9IvWel9Sb4Z35"
+OUT="$DATA/mock_test_set4DSTC10-AVSD_from_DSTC8_multiref.json"
+google_download_1
 
 echo "Done"
