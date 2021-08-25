@@ -16,6 +16,8 @@ https://arxiv.org/xxxxx
 
 * Note - This paper link will be updated soon and made available for citation before the submission to the workshop/submitting the challenge results. 
 
+Slowfast feature are available via [Following link](https://drive.google.com/file/d/1t3Nu2Ql6Nm5iIwTD5GceIM1_cqjC5Fe-/view?usp=sharing). The data can be downloaded, unrared and placed in the folder video_feats in similar manner as I3D features to run the codebase. 
+
 ## How to run the code:
 
    1. Obtain the package.
