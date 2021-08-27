@@ -2,9 +2,10 @@
 
 ## News
 The training data for reasoning timing is now available.
+* This data can be used only for AVSD@DSTC10 challenge until the data will be publicly available. 
+
 Please get the data from here:
 https://drive.google.com/file/d/1kBgOWBECHs2doWwHzP7O7WaVGlAup5Xo/view?usp=sharing
-
 
 ## Introduction
 This repository provides a baseline system for the AVSD track of the 10-th Dialog System Technology Challenges (DSTC10).
