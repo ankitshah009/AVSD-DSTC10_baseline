@@ -1,7 +1,7 @@
 # DSTC10 - Audio Visual Scene-aware Dialog (AVSD) - Baseline System
 
 ## News
-The training data for reasoning timing is now available.
+The training data for reasoning with timing is now available.
 * This data can be used only for AVSD@DSTC10 challenge until the data will be publicly available. 
 
 Please get the data from here:
