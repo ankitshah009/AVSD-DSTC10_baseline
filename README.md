@@ -16,7 +16,7 @@ Details of our scheme are in the following paper.
 https://arxiv.org/xxxxx
 
     @ixxxx{ankit@arxiv,
-            title={Reasoning for Audio Visual Scene-Aware Dialog(AVSD) Track in DSTC10},
+            title={Reasoning for Audio Visual Scene-Aware Dialog using Audio-Visual Transformer},
             author={Ankit Shah, Shijie Geng, Peng Gao, Anoop Cherian, Tim K. Marks, Chiori Hori},
             booktitle={Accepted to DSTC10},
             year={2021}
