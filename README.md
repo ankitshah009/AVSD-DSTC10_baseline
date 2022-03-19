@@ -19,7 +19,7 @@ The system employs an audio-visual Transformer with I3D visual features and VGGi
 The system outputs answers in response to questions with a dialog history and timings for evidence reasoing the answers as well. 
 
 Details of our scheme are in the following paper. 
-https://arxiv.org/xxxxx
+https://arxiv.org/abs/2110.06894
 
     @ixxxx{ankit@arxiv,
             title={AUDIO-VISUAL SCENE-AWARE DIALOG AND REASONING USINGAUDIO-VISUAL TRANSFORMERS WITH JOINT STUDENT-TEACHER LEARNING},
