@@ -88,15 +88,23 @@ IoU-2 measures the IoU between merged regions.
 ## Citation
 Please cite the following papers if you use this package for publication:
 
-### Attentional multimodal fusion for AVSD.
-https://arxiv.org/abs/1806.08409
+### Audio-Visual Scene-Aware Dialog and Reasoning using Audio-Visual Transformers with Joint Student-Teacher Learning
 
-    @article{hori2018end,
-      title={End-to-End Audio Visual Scene-Aware Dialog using Multimodal Attention-Based Video Features},
-      author={Hori, Chiori and Alamri, Huda and Wang, Jue and Winchern, Gordon and Hori, Takaaki and Cherian, Anoop and Marks, Tim K and Cartillier, Vincent and Lopes, Raphael Gontijo and Das, Abhishek and others},
-      journal={arXiv preprint arXiv:1806.08409},
-      year={2018}
-    } 
+@article{shah2021audio,
+  title={Audio-Visual Scene-Aware Dialog and Reasoning using Audio-Visual Transformers with Joint Student-Teacher Learning},
+  author={Shah, Ankit P and Geng, Shijie and Gao, Peng and Cherian, Anoop and Hori, Takaaki and Marks, Tim K and Roux, Jonathan Le and Hori, Chiori},
+  journal={arXiv preprint arXiv:2110.06894},
+  year={2021}
+}
+
+
+### DSTC10-AVSD Submission System with Reasoning using Audio-Visual Transformers with Joint Student-Teacher Learning
+
+@inproceedings{shah2022dstc10,
+  title={DSTC10-AVSD Submission System with Reasoning using Audio-Visual Transformers with Joint Student-Teacher Learning},
+  author={Shah, Ankit Parag and Hori, Takaaki and Le Roux, Jonathan and Hori, Chiori}
+}
+
 
 ### Audio Visual Transformer-based AVSD@DSTC10 baseline system
 https://arxiv.org/xxxxx
@@ -107,6 +115,17 @@ https://arxiv.org/xxxxx
             booktitle={Accepted to DSTC10},
             year={2021}
     }
+
+### Attentional multimodal fusion for AVSD.
+https://arxiv.org/abs/1806.08409
+
+    @article{hori2018end,
+      title={End-to-End Audio Visual Scene-Aware Dialog using Multimodal Attention-Based Video Features},
+      author={Hori, Chiori and Alamri, Huda and Wang, Jue and Winchern, Gordon and Hori, Takaaki and Cherian, Anoop and Marks, Tim K and Cartillier, Vincent and Lopes, Raphael Gontijo and Das, Abhishek and others},
+      journal={arXiv preprint arXiv:1806.08409},
+      year={2018}
+    } 
+
 
 ## Acknowledgements
 This system has been built upon the Bi-modal Transformer in https://github.com/v-iashin/BMT, and modified for AVSD.
