@@ -90,11 +90,13 @@ Please cite the following papers if you use this package for publication:
 
 ### Audio-Visual Scene-Aware Dialog and Reasoning using Audio-Visual Transformers with Joint Student-Teacher Learning
 
-    @article{shah2021audio,
-            title={Audio-Visual Scene-Aware Dialog and Reasoning using Audio-Visual Transformers with Joint Student-Teacher Learning},
-            author={Shah, Ankit P and Geng, Shijie and Gao, Peng and Cherian, Anoop and Hori, Takaaki and Marks, Tim K and Roux, Jonathan Le and Hori, Chiori},
-            journal={arXiv preprint arXiv:2110.06894},
-            year={2021}
+    @inproceedings{shah2022audio,
+        title={Audio-Visual Scene-Aware Dialog and Reasoning Using Audio-Visual Transformers with Joint Student-Teacher Learning},
+        author={Shah, Ankit and Geng, Shijie and Gao, Peng and Cherian, Anoop and Hori, Takaaki and Marks, Tim K and Le Roux, Jonathan and Hori, Chiori},
+        booktitle={ICASSP 2022-2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+        pages={7732--7736},
+        year={2022},
+        organization={IEEE}
     }
 
 
@@ -102,8 +104,17 @@ Please cite the following papers if you use this package for publication:
 
      @inproceedings{shah2022dstc10,
             title={DSTC10-AVSD Submission System with Reasoning using Audio-Visual Transformers with Joint Student-Teacher Learning},
-            author={Shah, Ankit Parag and Hori, Takaaki and Le Roux, Jonathan and Hori, Chiori}
+            author={Shah, Ankit Parag and Hori, Takaaki and Le Roux, Jonathan and Hori, Chiori},
      }
+
+
+### Overview of Audio Visual Scene-Aware Dialog with Reasoning Track for Natural Language Generation in DSTC10
+
+    @article{horioverview,
+        title={Overview of Audio Visual Scene-Aware Dialog with Reasoning Track for Natural Language Generation in DSTC10},
+        author={Hori, Chiori and Shah, Ankit Parag and Geng, Shijie and Gao, Peng and Cherian, Anoop and Hori, Takaaki and Le Roux, Jonathan and Marks, Tim K}
+    }
+
 
 
 ### Audio Visual Transformer-based AVSD@DSTC10 baseline system
