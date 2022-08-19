@@ -17,19 +17,7 @@ https://drive.google.com/file/d/1kBgOWBECHs2doWwHzP7O7WaVGlAup5Xo/view?usp=shari
 This repository provides a baseline system for the AVSD track of the 10-th Dialog System Technology Challenges (DSTC10).
 The system employs an audio-visual Transformer with I3D visual features and VGGish audio features in the default setup.
 The system outputs answers in response to questions with a dialog history and timings for evidence reasoing the answers as well. 
-
-Details of our scheme are in the following paper. 
-https://arxiv.org/abs/2110.06894
-
-    @ixxxx{ankit@arxiv,
-            title={AUDIO-VISUAL SCENE-AWARE DIALOG AND REASONING USINGAUDIO-VISUAL TRANSFORMERS WITH JOINT STUDENT-TEACHER LEARNING},
-            author={Ankit Shah, Shijie Geng, Peng Gao, Anoop Cherian, Takaaki Hori, Tim K. Marks, Jonathan Le Roux, Chiori Hori},
-            booktitle={Accepted to DSTC10},
-            year={2021}
-    }
-
-* Note - This paper link will be updated soon and made available for citation before the submission to the workshop/submitting the challenge results. 
-
+Details of our scheme are in [the baseline paper](https://ieeexplore.ieee.org/abstract/document/9746481). 
 Slowfast feature are available via [Following link](https://drive.google.com/file/d/1t3Nu2Ql6Nm5iIwTD5GceIM1_cqjC5Fe-/view?usp=sharing). The data can be downloaded, unrared and placed in the folder video_feats in similar manner as I3D features to run the codebase. 
 
 ## How to run the code:
@@ -88,17 +76,19 @@ IoU-2 measures the IoU between merged regions.
 ## Citation
 Please cite the following papers if you use this package for publication:
 
-### Audio-Visual Scene-Aware Dialog and Reasoning using Audio-Visual Transformers with Joint Student-Teacher Learning
+### Audio Visual Transformer-based AVSD@DSTC10 baseline system
 
-    @inproceedings{shah2022audio,
-        title={Audio-Visual Scene-Aware Dialog and Reasoning Using Audio-Visual Transformers with Joint Student-Teacher Learning},
-        author={Shah, Ankit and Geng, Shijie and Gao, Peng and Cherian, Anoop and Hori, Takaaki and Marks, Tim K and Le Roux, Jonathan and Hori, Chiori},
-        booktitle={ICASSP 2022-2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
-        pages={7732--7736},
-        year={2022},
-        organization={IEEE}
-    }
+https://ieeexplore.ieee.org/abstract/document/9746481
 
+    @inproceedings{ankit@ICASSP,
+                    title={Audio-Visual Scene-Aware Dialog and Reasoning Using Audio-Visual Transformers with Joint Student-Teacher Learning},
+                    author={SAnkit Shah, Shijie Geng, Peng Gao, Anoop Cherian, Takaaki Hori, Tim K. Marks, Jonathan Le Roux, Chiori Hori},
+                    booktitle={ICASSP 2022 - 2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+                    pages={7732-7736},
+                    year={2022},
+                    organization={IEEE}
+                   }
+    
 
 ### DSTC10-AVSD Submission System with Reasoning using Audio-Visual Transformers with Joint Student-Teacher Learning
 
@@ -113,18 +103,6 @@ Please cite the following papers if you use this package for publication:
     @article{horioverview,
         title={Overview of Audio Visual Scene-Aware Dialog with Reasoning Track for Natural Language Generation in DSTC10},
         author={Hori, Chiori and Shah, Ankit Parag and Geng, Shijie and Gao, Peng and Cherian, Anoop and Hori, Takaaki and Le Roux, Jonathan and Marks, Tim K}
-    }
-
-
-
-### Audio Visual Transformer-based AVSD@DSTC10 baseline system
-https://arxiv.org/xxxxx
-
-    @ixxxx{ankit@arxiv,
-            title={Reasoning for Audio Visual Scene-Aware Dialog(AVSD) Track in DSTC10},
-            author={Ankit Shah, Shijie Geng, Peng Gao, Anoop Cherian, Tim K. Marks, Chiori Hori},
-            booktitle={Accepted to DSTC10},
-            year={2021}
     }
 
 ### Attentional multimodal fusion for AVSD.
